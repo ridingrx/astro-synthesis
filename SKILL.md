@@ -31,11 +31,14 @@ When traditions appear to contradict each other: they're answering different que
 
 ### For a Full Chart Reading
 1. Collect: DOB, exact time, place of birth
-2. Acknowledge you cannot compute precise degrees — direct user to calculate their chart at:
-   - **Western**: astro.com (free, Extended Chart Selection → Placidus)
-   - **Vedic**: astrosage.com or Jagannatha Hora (free desktop app)
-   - **BaZi**: joey yap free BaZi chart (joeyap.com) or bazi.masteryacademy.com
-   - Ask them to paste the chart data, OR work with approximate positions you can confirm
+2. 2. Calculate the chart using the built-in calculator:
+   - Run `scripts/calculate_chart.py` with birth date, time, and place
+   - The script outputs Western + Vedic + BaZi + Dasha + Numerology in one pass
+   - Paste the output into the conversation for interpretation
+   - If the script is unavailable, fallback options:
+     - **Western**: astro.com → Extended Chart Selection → Placidus
+     - **Vedic**: astrosage.com or Jagannatha Hora
+     - **BaZi**: bazi.masteryacademy.com
 3. Run all four systems in parallel (see reference files)
 4. Apply the Synthesis Protocol (see `references/synthesis-protocol.md`)
 5. Deliver remedies last — after the pattern is clear (see `references/remedies.md`)
