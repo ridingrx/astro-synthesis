@@ -64,7 +64,43 @@ Clone this repo and point Claude to the `SKILL.md` file directly.
 ```bash
 git clone https://github.com/ridingrx/astro-synthesis
 ```
+## Requirements (for chart calculator)
 
+```bash
+pip install pyswisseph geopy timezonefinder pytz
+```
+
+---
+
+## Calculate a Chart
+
+Once dependencies are installed, run the calculator directly from your terminal:
+
+```bash
+python scripts/calculate_chart.py \
+  --date "1994-11-19" \
+  --time "09:45" \
+  --lat 21.1458 \
+  --lon 79.0882 \
+  --tz "Asia/Kolkata" \
+  --name "Your Full Birth Name"
+```
+
+If you don't know your coordinates, pass `--place` instead:
+
+```bash
+python scripts/calculate_chart.py \
+  --date "1994-11-19" \
+  --time "09:45" \
+  --place "Nagpur, India"
+```
+
+The script outputs your complete Western, Vedic, BaZi, Dasha, and Numerology chart in one go. Paste the output into Claude with the skill active for a full interpretation.
+
+For raw JSON output (useful for developers):
+```bash
+python scripts/calculate_chart.py --date "..." --time "..." --place "..." --json
+```
 ---
 
 ## How to Use
